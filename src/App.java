@@ -1,5 +1,4 @@
 import java.util.Random;
-import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -9,8 +8,8 @@ public class App {
          * generare un'espressione casuale e far sì che l'app controlli che il risultato fornito dall'utente sia corretto
          */
 
-        Scanner input = new Scanner(System.in);
         Random random = new Random();
+        MathSign mathSign = new MathSign();
 
         // generare quanti numeri avrà l'espressione, nel mio caso sarà da 2 a 4
         int length = random.nextInt(3)+2;
@@ -29,5 +28,8 @@ public class App {
         } else {
             System.out.println(first + "," + second + "," + third + "," + fourth);
         }
+
+        // controllo per capire se genera l'operatore matematico
+        System.out.println(mathSign.pickRandom());
     }
 }
