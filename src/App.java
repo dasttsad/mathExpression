@@ -9,27 +9,24 @@ public class App {
          */
 
         Random random = new Random();
-        MathSign mathSign = new MathSign();
+        Methods methods = new Methods();
 
-        // generare quanti numeri avrà l'espressione, nel mio caso sarà da 2 a 4
+        //generare quanti numeri avrà l'espressione, nel mio caso sarà da 2 a 4
         int length = random.nextInt(3)+2;
 
-        // generare i numeri dell'espressione (a prescindere dalla length, ne faccio generare 4)
-        int first = random.nextInt(99)+1;
-        int second = random.nextInt(99)+1;
-        int third = random.nextInt(99)+1;
-        int fourth = random.nextInt(99)+1;
+        //controllo per capire se la lenght viene generata randomicamente ogni volta
+        System.out.println(length);
 
-        // controllo per capire se funziona
-        if (length == 2) {
-            System.out.println(first + "," + second);
-        } else if (length == 3) {
-            System.out.println(first + "," + second + "," + third);
-        } else {
-            System.out.println(first + "," + second + "," + third + "," + fourth);
+        //generare i numeri in base alla lenght
+        int[] numbers = new int[length];
+        
+        for (int i = 0; i < length; i++) {
+            numbers[i] = random.nextInt(98)+1;
         }
 
-        // controllo per capire se genera l'operatore matematico
-        System.out.println(mathSign.pickRandom());
+        //controllo per capire se i numeri vengono generati in base alla lenght
+        for (int numero : numbers){
+            System.out.println(numero);
+        }
     }
 }

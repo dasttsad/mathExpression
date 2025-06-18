@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class MathSign {
+public class Methods {
     
     //generare un operatore casuale
     Random r = new Random();
@@ -15,4 +15,5 @@ public class MathSign {
         String picked = getMathSign(operator);
         return picked;
     }
+
 }
