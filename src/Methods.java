@@ -10,10 +10,9 @@ public class Methods {
         return arr[rdm];
     }
 
-    String pickRandom(){
+    String pickRandom(int l){
         String[] operator = {"+", "-", "*", "/"};
         String picked = getMathSign(operator);
         return picked;
     }
-
 }

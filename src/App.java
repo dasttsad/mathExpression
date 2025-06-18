@@ -28,5 +28,20 @@ public class App {
         for (int numero : numbers){
             System.out.println(numero);
         }
+
+        //generare gli operatori giusti per la lenght
+        String[] op = new String[length-1];
+
+        for (int index = 0; index < length-1; index++) {
+            op[index] = methods.pickRandom(length-1);
+        }
+
+        //controllo
+        for (String operatore : op) {
+            System.out.println(operatore);
+        }
+
+        //unire tutto ciò che ho generato
+        
     }
 }
